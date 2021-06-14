@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper" id="wrapper">
+        <div class="block">
+            <span class="text">Enter the name color</span>
+            <input class="block-enter" id="enter" onchange="changeColorInput()">
+            
+            <div>
+                <input type="color" id="colorMenu" onchange="cahngeColorMenu(this.value)">
+            </div>
+            <div class="block" id="blockAS">
+                <div class="text">Ready choise</div>
+                <button class="color colorA" id="colorA" onclick="changeColorButton('#222831')"></button>
+                <button class="color colorB" id="colorB" onclick="changeColorButton('#00ADB5')"></button>
+                <button class="color colorC" id="colorC" onclick="changeColorButton('#F67280')"></button>
+                <button class="color colorD" id="colorD" onclick="changeColorButton('#FF6F3C')"></button>
+                <button class="color colorE" id="colorE" onclick="changeColorButton('#71C9CE')"></button>
+                <button class="color colorF" id="colorF" onclick="changeColorButton('#393232')"></button>
+            </div>
+            <div class="history">
+                <div class="text">
+                    Use color from history: 
+                    <button class="clear__history" onclick="clearHistory()">Clear history</button>
+                </div>
+                <div class="history__content" id="historyContent" >
+                    <div class='start' id="firstElement" title="#222831"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>

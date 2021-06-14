@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="block__input block">
+            <div class="command__wrapper">
+                <div class="font-size block__input-point">
+                    <span class="title__input">
+                        Font size
+                    </span>
+                    <input type="text" id="font-size" class="input-date" onchange="changeExampleFont(value)">
+                    <span class="title__input">px</span>
+                </div>
+                <div class="color-text block__input-point">
+                    <span class="title__input">
+                        Color 
+                    </span>
+                    <input type="text" id="color" class="input-date" onchange="changeExampleColor(value)">
+                </div>
+                <div class="change-text block__input-point">
+                    <span class="title__input">
+                        New text
+                    </span>
+                    <input type="text" id="bigText" class="input-date" onchange="changeExampleText(value)">
+                    <button class="button" onclick="addText()">Add the text</button>
+                    <button class="button" onclick=deleteText()>Delete text</button>
+                </div>
+                <button class="button">...</button>
+            </div>
+        </div>
+        <div class="block__result block">
+            <div class="example" id="example">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ex error dolore soluta, corporis neque labore. Expedita quae est illo dolore enim qui dicta, recusandae, nemo odio, architecto sapiente quod!
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
