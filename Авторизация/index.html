@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="authorization__box">
+            <main class="authorization">
+                <div class="title">
+                    Авторизация
+                </div>
+                <form class="block__center">
+                    <div class="block__center-input">
+                        <img src="./img/ico/krest.svg" alt="" class="krest" onclick="clearInput()">
+                        <img src="./img/ico/contact.svg" alt="">
+                        <input type="text" class="input" placeholder="email / login" id="inputOne">
+                    </div>
+                    <div class="block__center-input">
+                        <img src="./img/ico/krest.svg" alt="" class="krest" onclick="clearInput2()">
+                        <img src="./img/ico/padlock.svg" alt="">
+                        <input type="password" class="input" placeholder="password" id="password"  onchange="valuePass()">
+                        <img src="./img/ico/view.svg" alt="" onclick="passView()" class="img-eye">
+                    </div>
+                    <button class="button" id="button" disabled="disabled">Войти</button>
+                </form>
+                <div class="reg">
+                    <a href="#">Ещё не зарегистрированы?</a>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
