@@ -1,0 +1,89 @@
+<!-- <?php include_once('./access/php/main.php')?> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do</title>
+  <link rel="stylesheet" href="./access/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <div class="main-wrapper">
+    <div class="wrapper-panel-add-task">
+      <form class="panel-add-task" method="POST" action="./access/php/addTask.php">
+        <p class="panel-add-task-title">
+          <span>
+            Добавить задачу
+          </span>
+        </p>
+        <input type="text" id="addTaskText" name="addTaskText" placeholder="Опишите задачу" class="input input-add-task">
+        <div class="panel-add-task-buttons">
+          <button class="button-cancel-task" onclick="cancelAddTask()">
+            Отмена
+          </button>
+          <button class="button-add-task" onclick="addTask()" type="submit">
+            Добавить
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="wrapper-panel-add-task wrapper-panel-trash-task">
+      <div class="panel-add-task panel-trash-task">
+        <img src="./access/img/ico/x-24.svg" alt="" onclick="closePanel()" class="img-close-panel">
+        <div class="panel-add-task-title panel-trash-task-title">
+          <span>
+            Выполненные задачи
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper-content">
+      <form action="./access/php/auth.php" name="form-auth" method="post" class="form-reg form-auth" id="formAuth">
+        <p>Логин: <input type="text" name="log-auth" class="form-reg-inp" ></p>
+        <p>Пароль: <input type="text" class="form-reg-inp" max="8" name="pass-auth"></p>
+        <button type="submit" onclick="closePanelAuth()">Вход</button>
+      </form>
+      <form action="./access/php/reg.php" name="form-reg" method="post" class="form-reg" id="formReg">
+        <p>Логин: <input type="text" class="form-reg-inp" name="reg-login"></p>
+        <p>Пароль: <input type="text" class="form-reg-inp" max="8" name="reg-pass"></p>
+        <button type="submit" onclick="closePanelReg()">Зарегестрироваться</button>
+      </form>
+      <div class="wrapper-user">
+        <div class="vhod" onclick="openPanelUserAuth()">
+          Вход
+        </div>
+        <div class="vhod" onclick="openPanelUserReg()">
+          Регистрация
+        </div>
+      </div>
+      <div class="wrapper-panel">
+        <input type="text" id="findTask" placeholder="Введите текст, чтобы найти задачу" class="input input-find-task" onchange="findTask()">
+        <div class="wrapper-panel-buttons">
+          <div class="button-trash button-add" title="Удаленные задачи" onclick="openPanelTrashTask()">
+            <img src="./access/img/ico/circle-check-24.svg" alt="">
+          </div>
+          <div class="button-add" title="Добавить задачу" onclick="openPanelAddTask()">
+            <img src="./access/img/ico/plus-24.svg" alt="">
+          </div>
+        </div>
+      </div>
+      
+      <div class="wrapper-tasks">
+        <div class="list-task-empty">
+          Список задач пока что пуст
+          <button class="button-add-task button-add-task-empty" onclick="openPanelAddTask()">
+            Добавить
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="./access/js/script.js"></script>
+</body>
+</html>
